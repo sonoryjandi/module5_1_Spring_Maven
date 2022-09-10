@@ -2,6 +2,7 @@ package system.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,5 +21,11 @@ public class UserController {
     public @ResponseBody // то, что я отдам в качестве ответа пользователю
     List getAllUsers(){
         return userService.getAllUsers();
+    }
+
+    @GetMapping
+//    @ResponseBody
+    public String getDefaultPage(){
+        return "controller_default_page";
     }
 }

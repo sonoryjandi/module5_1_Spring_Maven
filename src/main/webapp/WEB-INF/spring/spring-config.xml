@@ -7,9 +7,12 @@
 <!--    чтобы работали аннотации типа @Autowired-->
     <context:component-scan base-package="system"/>
 <!--    мы заставим спринг ходить по этому пакету и забрасывать всё с аннотациями в нужный контекст-->
-<mvc:view-controller path="/" view-name="users_page"/>
+<!--<mvc:view-controller path="/" view-name="test_page"/>-->
+<mvc:view-controller path="/" view-name="user_page"/>
+<!--<mvc:view-controller path="/" view-name="users_page"/>-->
     <bean id = "resolver" class = "org.springframework.web.servlet.view.InternalResourceViewResolver">
     <property name="prefix" value="WEB-INF/pages/"/>
+<!--    <property name="suffix" value=".html"/>-->
     <property name="suffix" value=".jsp"/>
 </bean>
 
